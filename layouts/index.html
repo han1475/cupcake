@@ -1,0 +1,32 @@
+{{ define "main"}}
+
+{{ $paginator := .Paginate (where (where .Site.Pages "Type" "post") "IsPage" true) }}
+{{ range $paginator.Pages }}
+<section id="post-content">
+    <div class="post-panel">
+      <h3 class="post-title">{{ .Title }}</h3>
+      <div class="summary">
+        {{ .Summary }}
+      </div>
+      <div class="post-meta">
+        <span class="lastmod">
+          {{ .Lastmod.Format (.Site.Params.dateFormatToUse | default "2006年1月2号") }}
+        </span>
+
+        {{ with .Params.categories }}
+        <span id="categories">
+          {{ range . }}
+            <a href="{{ "categories" | absURL}}/{{ . | urlize }}">{{ . }}</a>
+          {{ end }}
+        </span>
+        {{ end }}
+
+      </div>
+      <div class="readmore">
+        <a href="{{ .RelPermalink }} ">阅读更多</a>
+      </div>
+    </div>
+  </section>
+{{end}}
+
+{{end}}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{ partial "head.html" }}
+</head>
+<body>
+    {{ partial "header.html" }}
+    <div id="main-content">
+        <div class="container">
+            <section id="post-content">
+                <div class="post-panel">
+                    <h3 class="post-title">{{ .Title }}</h3>
+                    {{ .Content }}
+                </div>
+            </section>
+            {{ partial "slider.html" }}
+        </div>
+    </div>
+    {{ partial "footer.html" }}
+</body>
+</html>

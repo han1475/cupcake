@@ -1,0 +1,180 @@
+/*-------------------------------------------------------------------------------------------*/
+/* geneal */
+/*-------------------------------------------------------------------------------------------*/
+body {
+    background: #f6f6f6;
+    margin: 0 auto;
+  }
+  a{
+    text-decoration-color: #36414d;
+    color:#36414d;
+  }
+  .container {
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  #main-content .container {
+    margin-top: 91px;
+  }
+  /*-------------------------------------------------------------------------------------------*/
+  /* header */
+  /*-------------------------------------------------------------------------------------------*/
+  #header {
+    overflow: hidden;
+    -webkit-box-shadow: 0 1px 3px rgba(18, 18, 18, 0.1);
+    box-shadow: 0 1px 3px rgba(18, 18, 18, 0.1);
+    height: 81px;
+    background: #fff;
+    position: fixed;
+    top:0;
+    width:100%;
+  }
+  .logo {
+    background: #a3b8cc;
+    text-shadow: #36414d 0 1px 2px;
+    padding: 15px 13px;
+  }
+  #site-title {
+    margin: 0;
+    color: #fff;
+    font-weight: bold;
+    line-height: 1;
+    text-shadow: #36414d 0 2px 3px;
+  }
+  #site-title a {
+    font-size: 30px;
+    font-weight: blod;
+    color: #fff;
+    text-decoration: none;
+  }
+  #site-motto {
+    margin-top: 5px;
+    margin-bottom: 0;
+    color: #fff;
+    background: none;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 1.125;
+    text-shadow: #36414d 0 1px 2px;
+  }
+  
+  /*-------------------------------------------------------------------------------------------*/
+  /* post-panel */
+  /*-------------------------------------------------------------------------------------------*/
+  .post-panel {
+    background: #fff;
+    padding: 15px;
+    border-bottom: 1px solid #f0f2f7;
+    overflow: hidden;
+  }
+  .post-title {
+    text-align: center;
+    font-size: 18px;
+  }
+  .post-meta {
+    float: left;
+  }
+  .readmore {
+    float: right;
+  }
+  
+  /*-------------------------------------------------------------------------------------------*/
+  /* slider */
+  /*-------------------------------------------------------------------------------------------*/
+  .module {
+    background: #fff;
+    padding: 0;
+    margin-bottom: 10px;
+  }
+  .module-header {
+    margin: 0;
+    padding: 5px;
+    border-left: 5px solid #36414d;
+    font-size: 15px;
+    background: #a3b8cc;
+    color: #fff;
+    font-weight: bold;
+    line-height: 1;
+    text-shadow: #36414d 0 2px 3px;
+  }
+  .module-content {
+    padding: 10px 10px 10px 10px;
+    background: #fff;
+  }
+  .social a{
+    text-decoration: none;
+  }
+  .icon{
+    margin:0 4px;
+    fill:#a3b8cc
+  }
+  
+  /*-------------------------------------------------------------------------------------------*/
+  /* footer */
+  /*-------------------------------------------------------------------------------------------*/
+  #footer{
+    background: #fff;
+    margin-top: 10px;
+  }
+  .copyright{
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  /*-------------------------------------------------------------------------------------------*/
+  /* responsive */
+  /*-------------------------------------------------------------------------------------------*/
+  
+  /* 960px
+  -------------------------------------------------- */
+  @media only screen and (min-device-width: 960px) {
+    .container {
+      width: 950px;
+      padding: 0;
+    }
+    #post-content {
+      float: left;
+      margin-right: 10px;
+      width: 670px;
+    }
+    #slider {
+      float: right;
+      width: 270px;
+      overflow: hidden;
+      position: fixed;
+      margin-left: 680px;
+    }
+  }
+  
+  /* 680px - 959px
+  -------------------------------------------------- */
+  @media only screen and (min-device-width: 680px) and (max-device-width: 959px) {
+    .container {
+      width: 670px;
+      padding: 0;
+    }
+    #post-content {
+      margin: 0 auto;
+      width: 670px;
+    }
+    #slider {
+      display: none;
+    }
+  }
+  
+  /* 679px
+  -------------------------------------------------- */
+  @media only screen and (max-device-width: 679px) {
+    .container {
+      width: 100%;
+      padding: 0;
+    }
+    #post-content {
+      margin: 0 auto;
+      width: 98%;
+    }
+    #slider {
+      display: none;
+    }
+  }
+  
