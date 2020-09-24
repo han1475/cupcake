@@ -61,16 +61,17 @@
     <div class="categories module">
       <h2 class="module-header">分类</h2>
       <div class="module-content">
-        <ul>
-          <li>
-            <a href="/categories/tech">技术</a>
-            <ul>
-              <li>
-                <a href="/categories/tech/web">web</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
+        {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
+        <span class="categories"><a href="{{ "categories" | absURL }}/{{ $name | urlize }}">{{ $name }}</a></span>
+        {{ end }}
+      </div>
+    </div>
+    <div class="tags module">
+      <h2 class="module-header">标签</h2>
+      <div class="module-content">
+        {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+        <span class="tags"><a href="{{ "tags" | absURL }}/{{ $name | urlize }}">{{ $name }}</a></span>
+        {{ end }}
       </div>
     </div>
   </section>
