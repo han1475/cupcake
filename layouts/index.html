@@ -4,9 +4,16 @@
 {{ range $paginator.Pages }}
 <section id="post-content">
     <div class="post-panel">
-      <h3 class="post-title">{{ .Title }}</h3>
+      <h3 class="post-title">
+        <a href="{{ .RelPermalink }}" target="_blank" rel="noreferrer noopener">
+          {{ .Title }}
+        </a>
+      </h3>
       <div class="summary">
         {{ .Summary }}
+      </div>
+      <div class="content">
+        {{ .Content }}
       </div>
       <div class="post-meta">
         <span class="lastmod">
@@ -22,9 +29,9 @@
         {{ end }}
 
       </div>
-      <div class="readmore">
-        <a href="{{ .RelPermalink }} ">阅读更多</a>
-      </div>
+      <button class="readmore" onclick="readmore(this)" value="readmore">
+        阅读更多
+      </button>
     </div>
   </section>
 {{end}}
