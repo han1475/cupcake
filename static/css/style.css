@@ -16,6 +16,12 @@ body {
   #main-content .container {
     margin-top: 91px;
   }
+  button{
+    border: none;
+    background-color: #ffffff;
+    cursor: pointer;
+    outline:none;
+  }
   /*-------------------------------------------------------------------------------------------*/
   /* header */
   /*-------------------------------------------------------------------------------------------*/
@@ -76,14 +82,22 @@ body {
   }
   .readmore {
     float: right;
-    border: none;
-    background-color: #ffffff;
-    cursor: pointer;
-    outline:none;
   }
-  
+  .lastmod svg{
+    position:relative; top:2px; 
+  }
+  .categories svg{
+    position:relative; top:3px;
+  }
+  .categories a{
+    margin-left: -6px;
+  }
   .content{
     display: none;
+  }
+  .icon{
+    margin:0 4px;
+    fill:#a3b8cc;
   }
   /*-------------------------------------------------------------------------------------------*/
   /* sidebar */
@@ -111,11 +125,6 @@ body {
   .social a{
     text-decoration: none;
   }
-  .icon{
-    margin:0 4px;
-    fill:#a3b8cc
-  }
-  
   /*-------------------------------------------------------------------------------------------*/
   /* footer */
   /*-------------------------------------------------------------------------------------------*/

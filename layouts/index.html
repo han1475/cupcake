@@ -17,17 +17,19 @@
       </div>
       <div class="post-meta">
         <span class="lastmod">
-          {{ .Lastmod.Format (.Site.Params.dateFormatToUse | default "2006年1月2号") }}
+          {{- partial "svg/calender.svg" -}}
+          {{- .Lastmod.Format (.Site.Params.dateFormatToUse | default "2006年1月2号") -}}
         </span>
 
         {{ with .Params.categories }}
-        <span id="categories">
-          {{ range . }}
-            <a href="{{ "categories" | absURL}}/{{ . | urlize }}">{{ . }}</a>
-          {{ end }}
-        </span>
+        <span class="categories">
+            {{- partial "svg/categories.svg" -}}
+            {{ range . }}
+              <a href="{{ "categories" | absURL}}/{{ . | urlize }}">{{ . }}</a>
+            {{ end }}
+          </span>
         {{ end }}
-
+        
       </div>
       <button class="readmore" onclick="readmore(this)" value="readmore">
         阅读更多
