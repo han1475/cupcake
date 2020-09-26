@@ -86,10 +86,10 @@ body {
   .lastmod svg{
     position:relative; top:2px; 
   }
-  .categories svg{
+  .post-category svg{
     position:relative; top:3px;
   }
-  .categories a{
+  .post-category a{
     margin-left: -6px;
   }
   .content{
