@@ -1,7 +1,7 @@
 {{ define "main"}}
 
 {{ $paginator := .Paginate (where (where .Site.Pages "Type" "post") "IsPage" true) }}
-{{ range $paginator.Pages }}
+{{ range $paginator.Pages.ByLastmod.Reverse }}
 <section id="post-content">
     <div class="post-panel">
       <h3 class="post-title">
