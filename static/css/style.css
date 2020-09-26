@@ -92,6 +92,9 @@ body {
   .post-category a{
     margin-left: -6px;
   }
+  .post-tags svg{
+    position:relative; top:3px;
+  }
   .content{
     display: none;
   }

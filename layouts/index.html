@@ -29,6 +29,15 @@
             {{ end }}
           </span>
         {{ end }}
+
+        {{ with .Params.tags }}
+        <span class="post-tags">
+            {{- partial "svg/tags.svg" -}}
+              {{ range . }}
+                <span><a href="{{ "tags" | absURL}}/{{ . | urlize }}">{{ . }}</a></span>
+              {{ end }}
+          </span>
+        {{ end }}
         
       </div>
       <button class="readmore" onclick="readmore(this)" value="readmore">
