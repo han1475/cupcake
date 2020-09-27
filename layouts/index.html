@@ -4,11 +4,11 @@
 {{ range $paginator.Pages.ByLastmod.Reverse }}
 <section id="post">
     <div class="post-panel">
-      <h3 class="post-title">
-        <a href="{{ .RelPermalink }}" target="_blank" rel="noreferrer noopener">
+      <h1 class="post-title">
+        <a class="post-link" href="{{ .RelPermalink }}" target="_blank" rel="noreferrer noopener">
           {{ .Title }}
         </a>
-      </h3>
+      </h1>
       <div class="post-summary">
         {{ .Summary }}
       </div>

@@ -13,29 +13,29 @@
     #post {
         float: left;
         margin-right: 10px;
-        width: 670px;
+        width: 750px;
     }
 
     #sidebar {
         float: right;
-        width: 270px;
+        width: 190px;
         overflow: hidden;
         position: fixed;
-        margin-left: 680px;
+        margin-left: 760px;
     }
 }
 
 /* 680px - 959px
   -------------------------------------------------- */
-@media only screen and (min-device-width: 680px) and (max-device-width: 959px) {
+@media only screen and (min-device-width: 760px) and (max-device-width: 959px) {
     .container {
-        width: 670px;
+        width: 750px;
         padding: 0;
     }
 
     #post {
         margin: 0 auto;
-        width: 670px;
+        width: 750px;
     }
 
     #sidebar {
@@ -45,7 +45,7 @@
 
 /* 679px
   -------------------------------------------------- */
-@media only screen and (max-device-width: 679px) {
+@media only screen and (max-device-width: 659px) {
     .container {
         width: 100%;
         padding: 0;
