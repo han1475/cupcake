@@ -2,27 +2,27 @@
 
 {{ $paginator := .Paginate (where (where .Site.Pages "Type" "post") "IsPage" true) }}
 {{ range $paginator.Pages.ByLastmod.Reverse }}
-<section id="post-content">
+<section id="post">
     <div class="post-panel">
       <h3 class="post-title">
         <a href="{{ .RelPermalink }}" target="_blank" rel="noreferrer noopener">
           {{ .Title }}
         </a>
       </h3>
-      <div class="summary">
+      <div class="post-summary">
         {{ .Summary }}
       </div>
-      <div class="content">
+      <div class="post-content" style="display: none;">
         {{ .Content }}
       </div>
       <div class="post-meta">
-        <span class="lastmod">
+        <span class="post-lastmod">
           {{- partial "svg/calender.svg" -}}
           {{- .Lastmod.Format (.Site.Params.dateFormatToUse | default "2006年1月2号") -}}
         </span>
 
         {{ with .Params.categories }}
-        <span class="post-category">
+        <span class="post-categories">
             {{- partial "svg/categories.svg" -}}
             {{ range . }}
               <a href="{{ "categories" | absURL}}/{{ . | urlize }}">{{ . }}</a>
@@ -40,7 +40,7 @@
         {{ end }}
         
       </div>
-      <button class="readmore" onclick="readmore(this)" value="readmore">
+      <button class="post-readmore" onclick="readmore(this)" value="readmore">
         阅读更多
       </button>
     </div>

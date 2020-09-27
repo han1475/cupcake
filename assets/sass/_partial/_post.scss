@@ -1,0 +1,47 @@
+// ==============================
+// post
+// ==============================
+
+.post-panel {
+    background: #fff;
+    padding: 15px;
+    border-bottom: 1px solid #f0f2f7;
+    overflow: hidden;
+}
+
+.post-title {
+    text-align: center;
+    font-size: 18px;
+}
+
+.post-meta {
+    float: left;
+}
+
+.post-readmore {
+    float: right;
+}
+
+.post-lastmod svg {
+    position: relative;
+    top: 2px;
+}
+
+.post-categories svg {
+    position: relative;
+    top: 3px;
+}
+
+.post-categories a {
+    margin-left: -6px;
+}
+
+.post-tags svg {
+    position: relative;
+    top: 3px;
+}
+
+.icon {
+    margin: 0 4px;
+    fill: #a3b8cc;
+}

@@ -8,13 +8,13 @@
     {{- partial "head.html" . -}}
 <body>
     {{- partial "header.html" . -}}
-    <div id="main-content">
+    <div id="main">
         <div class="container">
             {{- block "main" . }}{{- end }}
             {{- partial "sidebar.html" . -}}
         </div>
     </div>
     {{- partial "footer.html" . -}}
-    <script type="text/javascript" src="{{ "js/cupcake.js" | relURL }}"></script>
+    {{ partial "scripts.html" . }}
 </body>
 </html>

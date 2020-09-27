@@ -5,12 +5,14 @@
 </head>
 <body>
     {{ partial "header.html" }}
-    <div id="main-content">
+    <div id="main">
         <div class="container">
-            <section id="post-content">
+            <section id="post">
                 <div class="post-panel">
                     <h3 class="post-title">{{ .Title }}</h3>
-                    {{ .Content }}
+                    <div class="post-content">
+                        {{ .Content }}
+                    </div>    
                 </div>
             </section>
             {{ partial "sidebar.html" . }}

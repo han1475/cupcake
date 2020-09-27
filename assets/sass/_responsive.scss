@@ -1,0 +1,62 @@
+// ==============================
+// responsive
+// ==============================
+
+/* 960px
+  -------------------------------------------------- */
+  @media only screen and (min-device-width: 960px) {
+    .container {
+        width: 950px;
+        padding: 0;
+    }
+
+    #post {
+        float: left;
+        margin-right: 10px;
+        width: 670px;
+    }
+
+    #sidebar {
+        float: right;
+        width: 270px;
+        overflow: hidden;
+        position: fixed;
+        margin-left: 680px;
+    }
+}
+
+/* 680px - 959px
+  -------------------------------------------------- */
+@media only screen and (min-device-width: 680px) and (max-device-width: 959px) {
+    .container {
+        width: 670px;
+        padding: 0;
+    }
+
+    #post {
+        margin: 0 auto;
+        width: 670px;
+    }
+
+    #sidebar {
+        display: none;
+    }
+}
+
+/* 679px
+  -------------------------------------------------- */
+@media only screen and (max-device-width: 679px) {
+    .container {
+        width: 100%;
+        padding: 0;
+    }
+
+    #post {
+        margin: 0 auto;
+        width: 98%;
+    }
+
+    #sidebar {
+        display: none;
+    }
+}
