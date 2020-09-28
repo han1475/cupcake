@@ -23,6 +23,9 @@
 .module-content {
     padding: 10px 10px 10px 10px;
     background: #fff;
+    .tags{
+        display: inline-block;
+    }
 }
 
 .search-input{
