@@ -1,50 +1,50 @@
 {{ define "main"}}
 
-{{ $paginator := .Paginate (where (where .Site.Pages "Type" "post") "IsPage" true) }}
-{{ range $paginator.Pages.ByLastmod.Reverse }}
 <section id="post">
-    <div class="post-panel">
-      <h1 class="post-title">
-        <a class="post-link" href="{{ .RelPermalink }}" target="_blank" rel="noreferrer noopener">
-          {{ .Title }}
-        </a>
-      </h1>
-      <div class="post-summary">
-        {{ .Summary }}
-      </div>
-      <div class="post-content" style="display: none;">
-        {{ .Content }}
-      </div>
-      <div class="post-meta">
-        <span class="post-lastmod">
-          {{- partial "svg/calender.svg" -}}
-          {{- .Lastmod.Format (.Site.Params.dateFormatToUse | default "2006年1月2号") -}}
-        </span>
-
-        {{ with .Params.categories }}
-        <span class="post-categories">
-            {{- partial "svg/categories.svg" -}}
-            {{ range . }}
-              <a href="{{ "categories" | absURL}}/{{ . | urlize }}">{{ . }}</a>
-            {{ end }}
-          </span>
-        {{ end }}
-
-        {{ with .Params.tags }}
-        <span class="post-tags">
-            {{- partial "svg/tags.svg" -}}
-              {{ range . }}
-                <span><a href="{{ "tags" | absURL}}/{{ . | urlize }}">{{ . }}</a></span>
-              {{ end }}
-          </span>
-        {{ end }}
-        
-      </div>
-      <button class="post-readmore" onclick="readmore(this)" value="readmore">
-        阅读更多
-      </button>
+  {{ $paginator := .Paginate (where (where .Site.Pages "Type" "post") "IsPage" true) }}
+  {{ range $paginator.Pages.ByLastmod.Reverse }}
+  <div class="post-panel">
+    <h1 class="post-title">
+      <a class="post-link" href="{{ .RelPermalink }}" target="_blank" rel="noreferrer noopener">
+        {{ .Title }}
+      </a>
+    </h1>
+    <div class="post-summary">
+      {{ .Summary }}
     </div>
-  </section>
-{{end}}
+    <div class="post-content" style="display: none;">
+      {{ .Content }}
+    </div>
+    <div class="post-meta">
+      <span class="post-lastmod">
+        {{- partial "svg/calender.svg" -}}
+        {{- .Lastmod.Format (.Site.Params.dateFormatToUse | default "2006年1月2号") -}}
+      </span>
+
+      {{ with .Params.categories }}
+      <span class="post-categories">
+        {{- partial "svg/categories.svg" -}}
+        {{ range . }}
+        <a href="{{ "categories" | absURL}}/{{ . | urlize }}">{{ . }}</a>
+        {{ end }}
+      </span>
+      {{ end }}
+
+      {{ with .Params.tags }}
+      <span class="post-tags">
+        {{- partial "svg/tags.svg" -}}
+        {{ range . }}
+        <span><a href="{{ "tags" | absURL}}/{{ . | urlize }}">{{ . }}</a></span>
+        {{ end }}
+      </span>
+      {{ end }}
+
+    </div>
+    <button class="post-readmore" onclick="readmore(this)" value="readmore">
+      阅读更多
+    </button>
+  </div>
+  {{end}}
+</section>
 
 {{end}}

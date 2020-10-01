@@ -49,3 +49,17 @@ function mapLang(name) {
   }
 highlight();
 
+/**
+ * search
+ */
+function search() {
+  var keyword = document.getElementById("search-input").value
+  document.querySelectorAll("div.post-panel")
+  .forEach((el)=>{
+    if (el.textContent.toLowerCase().indexOf(keyword.toLowerCase()) < 0) {
+      el.style.display="none"
+    }else{
+      el.style.display="block"
+    }
+  })
+}
