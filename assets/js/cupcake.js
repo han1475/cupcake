@@ -62,6 +62,7 @@ function search() {
       el.style.display="block"
     }
   })
+  filter("包含",keyword)
 }
 
 /**
@@ -77,6 +78,7 @@ function cat(obj) {
         el.style.display = "none"
       }
     })
+  filter("分类为",keyword)
 }
 
 /** 
@@ -95,4 +97,18 @@ function tags(obj) {
           }
         })
     })
+  filter("标签为",keyword)
+}
+
+/** 
+ * filter title and no result
+ */
+function filter(option,keyword){
+  var el=document.getElementById("filter");
+  if (el!=null) el.remove();
+  var str=`<div id="filter" style="text-align: center;"><h2>`+option+keyword+"的文章如下:</h2>"
+  if (document.getElementById("post").offsetHeight==0) {
+    str+=`<h3>没有找到相关文章</h3></div>`
+  }
+  document.getElementById("post").insertAdjacentHTML('afterbegin',str);
 }
