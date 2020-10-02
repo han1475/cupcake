@@ -33,7 +33,7 @@
       <h2 class="module-header">分类</h2>
       <div class="module-content">
         {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
-        <span class="categories"><a href="{{ "categories" | absURL }}/{{ $name | urlize }}">{{ $name }}</a></span>
+        <span class="categories"><a onclick="cat(this)"href="javascript:void(0);">{{ $name }}</a></span>
         {{ end }}
       </div>
     </div>
@@ -41,7 +41,7 @@
       <h2 class="module-header">标签</h2>
       <div class="module-content">
         {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
-        <span class="tags"><a href="{{ "tags" | absURL }}/{{ $name | urlize }}">{{ $name }}</a></span>
+        <span class="tags"><a onclick="tags(this)"href="javascript:void(0);">{{ $name }}</a></span>
         {{ end }}
       </div>
     </div>

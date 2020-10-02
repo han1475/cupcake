@@ -63,3 +63,36 @@ function search() {
     }
   })
 }
+
+/**
+ * categories
+ */
+function cat(obj) {
+  var keyword = obj.textContent
+  document.querySelectorAll("div.post-panel")
+    .forEach((el) => {
+      if (el.querySelector("a#categories").textContent===keyword) {
+        el.style.display = "block"
+      } else {
+        el.style.display = "none"
+      }
+    })
+}
+
+/** 
+ * tags
+ */
+function tags(obj) {
+  var flag = false;
+  var keyword = obj.textContent
+  document.querySelectorAll("div.post-panel")
+    .forEach((el) => {
+      el.style.display="none"
+      el.querySelectorAll("a.tag")
+        .forEach((tag) => {
+          if (tag.textContent===keyword) {
+            el.style.display="block"
+          }
+        })
+    })
+}

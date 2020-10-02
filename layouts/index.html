@@ -25,7 +25,7 @@
       <span class="post-categories">
         {{- partial "svg/categories.svg" -}}
         {{ range . }}
-        <a href="{{ "categories" | absURL}}/{{ . | urlize }}">{{ . }}</a>
+        <a id="categories" onclick="cat(this)" href="javascript:void(0);">{{ . }}</a>
         {{ end }}
       </span>
       {{ end }}
@@ -34,7 +34,7 @@
       <span class="post-tags">
         {{- partial "svg/tags.svg" -}}
         {{ range . }}
-        <span><a href="{{ "tags" | absURL}}/{{ . | urlize }}">{{ . }}</a></span>
+        <span><a class="tag" onclick="tags(this)" href="javascript:void(0);">{{ . }}</a></span>
         {{ end }}
       </span>
       {{ end }}
