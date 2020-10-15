@@ -111,12 +111,4 @@ function filter(option,keyword){
     str+=`<h3>没有找到相关文章</h3></div>`
   }
   document.getElementById("post").insertAdjacentHTML('afterbegin',str);
-  var el=document.getElementById("footer")
-  if (document.body.scrollHeight <= window.innerHeight) {
-    el.style.position="fixed"
-    el.style.bottom="0"
-  }
-  else{
-    el.style.position="static"
-  }
 }

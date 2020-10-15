@@ -4,6 +4,8 @@
 
 html{
     font-size: 1.125em;
+    min-height:100%;
+    position: relative;
 }
 body {
     background: #f6f6f6;
@@ -26,8 +28,19 @@ a {
     overflow: hidden;
 }
 
-#main .container {
-    margin-top: 91px;
+#main {
+    position: relative;
+    top: 0px;
+    .container {
+        margin-top: 91px;
+    }
+}
+
+#main::after {
+    height: 104px;
+    content: "";
+    display: block;
+    visibility: hidden; 
 }
 
 button {
