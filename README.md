@@ -25,6 +25,9 @@ PygmentsOptions = "linenos=table"
   # @see https://gohugo.io/functions/format/
   dateFormatToUse = "2006年1月2号"
 
+  # site motto
+  motto = "example motto"
+
 [params.social]
     a-email = "mailto:yourname@example.com"
     g-github = "https://github.com/yourname"
