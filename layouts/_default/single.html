@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    {{ partial "head.html" }}
+    {{ partial "head.html" . }}
 </head>
 <body>
-    {{ partial "header.html" }}
+    {{ partial "header.html" . }}
     <div id="main">
         <div class="container">
             <section id="post">
@@ -18,7 +18,7 @@
             {{ partial "sidebar.html" . }}
         </div>
     </div>
-    {{ partial "footer.html" }}
+    {{ partial "footer.html" . }}
     <!-- theme main js -->
     {{ $jsTemplate := resources.Get "js/cupcake.js" }}
     {{ $secureJS := $jsTemplate | resources.ExecuteAsTemplate "js/main.js" . | fingerprint }}
